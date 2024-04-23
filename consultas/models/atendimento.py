@@ -1,6 +1,7 @@
 from django.core.validators import MinLengthValidator
 
 from consultas.models import *
+from . import Prioridade
 from .plano import Plano
 from .paciente import Paciente
 
@@ -18,3 +19,4 @@ class Atendimento(BaseModels):
 
     def __str__(self):
         return f'{self.data} - {self.hora} : {self.motivo} - {self.prioridade} - {self.plano}'
+

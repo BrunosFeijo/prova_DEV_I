@@ -21,4 +21,10 @@ class Paciente(BaseModels):
     parentesco = models.CharField(max_length=20, choices=Parentesco)
 
     def __str__(self):
-        return self.nome
+        return f'{self.nome} - {self.cpf}'
+
+    def paciente_por_cpf(cpf_verificado: str):
+        return Paciente.objects.get(cpf=cpf_verificado)
+
+    def paciente_por_data_plano(data_plano: str):
+        return Paciente.objects.filter(paciente__dataplano=data_plano)
