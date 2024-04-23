@@ -4,3 +4,4 @@ from .paciente import *
 from .parentesco import *
 from .prioridade import *
 from .atendimento import *
+from .tipo_alergia import *
